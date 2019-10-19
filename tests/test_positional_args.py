@@ -33,7 +33,7 @@ def test_incorrect_fixture(absolute_path):
     assert stdout.count(b'FPO100') == 5, stdout
 
 
-@pytest.mark.skipif(sys.version_info < (3.8), reason='Syntax error')
+@pytest.mark.skipif(sys.version_info < (3, 8), reason='Syntax error')
 def test_incorrect_fixture_noqa(absolute_path):
     """Checks that incorrect code does not raise warning with noqa."""
     filename = absolute_path('fixtures', 'incorrect.py')
