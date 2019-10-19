@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-import sys
 import subprocess
+import sys
 
 ERROR_COUNT = 5 if sys.python_version >= (3.8) else 0
 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import ast
-from typing import Iterator, Tuple, List
+from typing import Iterator, List, Tuple
 
 import pkg_resources
 
@@ -24,6 +24,7 @@ class _ArgumentsVisitor(ast.NodeVisitor):
 
 
 class Checker(object):
+    """Entrypoint to the app."""
 
     _FPO100 = 'FP0100 Found positional-only arguments'
 
@@ -31,9 +32,11 @@ class Checker(object):
     version = pkg_version
 
     def __init__(self, tree: ast.AST) -> None:
+        """We request ``ast`` tree from ``flake8`` API."""
         self._tree = tree
 
     def run(self) -> Iterator[Tuple[int, int, str, type]]:
+        """Returns found violations one by one."""
         visitor = _ArgumentsVisitor()
         visitor.visit(self._tree)
 
