@@ -3,7 +3,7 @@
 import subprocess
 import sys
 
-ERROR_COUNT = 5 if sys.python_version >= (3.8) else 0
+ERROR_COUNT = 5 if sys.version_info >= (3.8) else 0
 
 
 def test_correct_fixture(absolute_path):
