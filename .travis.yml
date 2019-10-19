@@ -7,13 +7,10 @@ python:
   - 3.8
 
 before_install:
-  - pip freeze | xargs pip uninstall -y
   - pip install poetry==1.0.0b2
-  - pip install importlib-metadata
 
 install:
   - poetry install
-  - poetry run -vvv pip install importlib-metadata
 
 script:
   - poetry run flake8 .
