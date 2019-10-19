@@ -12,6 +12,7 @@ before_install:
 
 install:
   - poetry install
+  - poetry run pip install importlib-metadata
 
 script:
   - poetry run flake8 .
