@@ -19,7 +19,7 @@ def test_correct_fixture(absolute_path):
     assert len(stdout) == 0, stdout
 
 
-@pytest.mark.skipif(sys.version_info < (3.8), reason='Syntax error')
+@pytest.mark.skipif(sys.version_info < (3, 8), reason='Syntax error')
 def test_incorrect_fixture(absolute_path):
     """End-to-End test to check that incorrect code raises warning."""
     filename = absolute_path('fixtures', 'incorrect.py')
