@@ -9,6 +9,7 @@ python:
 before_install:
   - pip freeze | xargs pip uninstall -y
   - pip install poetry==1.0.0b2
+  - pip install importlib-metadata
 
 install:
   - poetry install
