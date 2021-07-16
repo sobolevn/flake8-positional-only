@@ -25,7 +25,7 @@ What code is considered correct?
 Any good old Python function and method definitions
 with any parameters except positional-only parameters.
 
-What code is considred incorrect?
+What code is considered incorrect?
 
 ```python
 def function(param, /):
