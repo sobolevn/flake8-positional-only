@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 def function(
     pos,  # noqa: FPO100
     /,
@@ -48,7 +49,6 @@ class Test(object):
     ):
         ...
 
-
     async def coroutine(
         self,  # noqa: FPO100
         /,
@@ -63,5 +63,6 @@ class Test(object):
         **kwargs,
     ):
         ...
+
 
 test_lambda = lambda x, /: x

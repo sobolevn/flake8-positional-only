@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 def function(
     arg1,
     arg2: int,
@@ -43,7 +44,6 @@ class Test(object):
     ):
         ...
 
-
     async def coroutine(
         self,
         arg1,
@@ -57,5 +57,6 @@ class Test(object):
         **kwargs,
     ):
         ...
+
 
 test_lambda = lambda x: x
